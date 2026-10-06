@@ -8,15 +8,15 @@ on: push
 #### JOBS #####
 jobs:
   code:
-    runs-on: ubuntu-latest
-    steps:
+    runs-on: ubuntu-latest # runner OS
+    steps: # step
       - name: Code checkout
-        run: echo "Code checkout done"
+        uses: actions/checkout@v7 # actions
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Code Build
-        run: echo "Code build done"
+      - name: Code Build with docker
+        run: echo "Docker todo"
   test:
     runs-on: ubuntu-latest
     steps:
